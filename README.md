@@ -4,7 +4,7 @@ Primera propuesta de pasos a seguir.
 2. encontrar el arbol recubridor minimo MST del grafo ingresado
 3. dividir en 8 el peso del MST, para aproximar cuantos dias tomará entregar toda la mercancia, 
    solo habrá un repartidor
-4. hacer n recorridos (subconjuntos) que serán similares en peso para los n correspondientes
+4. hacer n recorridos (subconjuntos) que serán similares en peso para los n dias correspondientes
 
 Como abordar las restricciones dadas:
 
