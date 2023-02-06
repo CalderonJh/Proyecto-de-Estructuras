@@ -52,7 +52,12 @@ public class FloydWarshall {
         System.out.println("Cost Matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(dist[i][j] + "\t");
+                if(dist[i][j] == INF){
+                    System.out.print("∞\t");
+                }else{
+                    System.out.print(dist[i][j] + "\t");
+                }
+
             }
             System.out.println();
         }

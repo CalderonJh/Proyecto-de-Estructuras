@@ -17,7 +17,6 @@ public class Graph {
     //cantidad de aristas creadas
     private int edges;
 
-
     /**
      * Constructor de la clase Graph
      * @param vertices representa la cantidad de vertices que tendrá el nuevo grafo.
@@ -34,8 +33,9 @@ public class Graph {
      * @param v1 vértice de inicio
      * @param v2 vértice de destino
      * @param weight peso de la arista que conecta los vertices
+     * @param address breve descripcion de lo que representa el vertice
      */
-    public void addEdge(int v1, int v2, int weight){
+    public void addEdge(int v1, int v2, int weight, String address){
         adj[v1][v2] = weight;
         adj[v2][v1] = weight;
         edges++;
