@@ -53,7 +53,7 @@ public class FloydWarshall {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if(dist[i][j] == INF){
-                    System.out.print("∞\t");
+                    System.out.print("•\t");
                 }else{
                     System.out.print(dist[i][j] + "\t");
                 }
@@ -67,7 +67,12 @@ public class FloydWarshall {
         System.out.println("Path Matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(next[i][j] + "\t");
+                if (next[i][j] == - 1){
+                    System.out.print("•\t");
+                }else{
+                    System.out.print(next[i][j] + "\t");
+                }
+
             }
             System.out.println();
         }

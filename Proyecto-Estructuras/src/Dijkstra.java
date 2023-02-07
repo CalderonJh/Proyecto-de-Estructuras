@@ -1,4 +1,6 @@
 import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
 
 public class Dijkstra {
 
@@ -58,13 +60,18 @@ public class Dijkstra {
         }
 
         //imprime el camino más corto encontrado
-        System.out.println("The shortest path between the vertex " + start + " and " + end + ":");
         System.out.println(start + " - " + end + ": " + dist[end]);
         int curr = end;
+        Stack<Integer> stack = new Stack<>();
+
         while (curr != -1) {
-            System.out.print(curr + " ");
+            stack.add(curr);
             curr = predecessor[curr];
         }
+        while (!stack.isEmpty()){
+            System.out.print(stack.pop() + " ");
+        }
+        System.out.println();
     }
 
     public static void allShortestPath(Graph graph, int start){
