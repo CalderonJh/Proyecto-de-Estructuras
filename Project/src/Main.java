@@ -5,8 +5,14 @@ import java.io.IOException;
     public class Main {
         public static void main(String[] args) {
             Graph graph = new Graph(9);
+            read_txt(graph);
+            graph.print();
+        }
+
+
+        public static void read_txt(Graph graph){
             try {
-                BufferedReader reader = new BufferedReader(new FileReader("/home/jhonc/IdeaProjects/Proyecto-de-Estructuras/Proyecto-Estructuras/src/inputGrafo.txt"));
+                BufferedReader reader = new BufferedReader(new FileReader("./Project/inputGrafo.txt"));
                 String line = reader.readLine();
                 while (line != null) {
                     String[] input = line.split(",");
@@ -17,8 +23,6 @@ import java.io.IOException;
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            FloydWarshall.floydWarshall(graph);
         }
 
     }
