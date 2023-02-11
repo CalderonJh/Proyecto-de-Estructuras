@@ -52,7 +52,10 @@ public class FloydWarshall {
         System.out.println("Cost Matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(dist[i][j] + "\t");
+                if(dist[i][j] == Integer.MAX_VALUE)
+                    System.out.print("•\t");
+                else
+                    System.out.print(dist[i][j] + "\t");
             }
             System.out.println();
         }
@@ -62,7 +65,10 @@ public class FloydWarshall {
         System.out.println("Path Matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(next[i][j] + "\t");
+                if (next[i][j] == -1)
+                    System.out.print("•\t");
+                else
+                    System.out.print(next[i][j] + "\t");
             }
             System.out.println();
         }

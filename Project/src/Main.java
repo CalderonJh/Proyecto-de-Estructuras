@@ -4,9 +4,9 @@ import java.io.IOException;
 
     public class Main {
         public static void main(String[] args) {
-            Graph graph = new Graph(9);
+            Graph graph = new Graph(18);
             read_txt(graph);
-            graph.print();
+            FloydWarshall.floydWarshall(graph);
         }
 
 

@@ -17,6 +17,9 @@ public class Graph {
     //cantidad de aristas creadas
     private int edges;
 
+    //peso total del grafo
+    private double totalWeight;
+
     /**
      * Constructor de la clase Graph
      * @param vertices representa la cantidad de vertices que tendrá el nuevo grafo.
@@ -38,6 +41,7 @@ public class Graph {
     public void addEdge(int v1, int v2, int weight, String address){
         adj[v1][v2] = weight;
         adj[v2][v1] = weight;
+        totalWeight += weight;
         edges++;
     }
 
@@ -120,5 +124,11 @@ public class Graph {
     //obtener cantidad total de aristas creadas
     public int getEdges() {
         return edges;
+    }
+
+    //Obtener el peso total del grafo
+
+    public double getTotalWeight() {
+        return totalWeight;
     }
 }
