@@ -1,0 +1,7 @@
+1. Agregar vertices solo de un municipio, ya que estos deberán ser tratados de forma individual
+2. Al terminar las entregas en un municipio se revisa si vale la pena ir a otro en el tiempo faltante
+
+Para la creación del grafo:
+-Crear un txt con formato de entrada (nodo1, nodo2, peso, dirección)
+-Leer el txt y guardar las líneas en una lista
+-Con la lista crear el grafo
