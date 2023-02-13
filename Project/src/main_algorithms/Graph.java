@@ -1,8 +1,4 @@
-/**
- * La clase Graph representa un grafo en su forma básica, el cual
- *     se creará con una cantidad fija de vertices y se le podrán agregar
- *     aristas desde un vértice a otro representando un peso.
- */
+package main_algorithms;
 
 import java.util.*;
 
@@ -21,7 +17,7 @@ public class Graph {
     private double totalWeight;
 
     /**
-     * Constructor de la clase Graph
+     * Constructor de la clase main_algorithms.Graph
      * @param vertices representa la cantidad de vertices que tendrá el nuevo grafo.
      */
     public Graph(int vertices) {
@@ -29,7 +25,6 @@ public class Graph {
         adj = new int[vertices][vertices];
         edges = 0;
     }
-
 
     /**
      * addEdge permite conectar dos vertices del nodo
@@ -45,7 +40,6 @@ public class Graph {
         edges++;
     }
 
-
     //Imprime una matriz de pesos asociada al grafo creado
     public void print() {
         for (int i = 0; i < vertices; i++) {
@@ -56,7 +50,6 @@ public class Graph {
         }
     }
 
-
     /**
      *Obtener la cantidad de vertices con los que se creó el grafo
      * @return numero de vertices del grafo
@@ -64,7 +57,6 @@ public class Graph {
     public int getVertices() {
         return vertices;
     }
-
 
     /**
      * Obtener la matriz adjunta al grafo
@@ -82,7 +74,6 @@ public class Graph {
         Dfs(v, new boolean[vertices]);
     }
 
-
     /**
      * Recorrido DFS del grafo
      * @param v el vértice de inicio
@@ -97,7 +88,6 @@ public class Graph {
             }
         }
     }
-
 
     /**
      * recorrido BFS del grafo

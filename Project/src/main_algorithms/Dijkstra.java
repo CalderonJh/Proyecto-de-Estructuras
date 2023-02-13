@@ -1,3 +1,5 @@
+package main_algorithms;
+
 import java.util.*;
 
 public class Dijkstra {
@@ -16,7 +18,7 @@ public class Dijkstra {
     }
 
     /**
-     * Encuentra el camino más corto entre dos vertices específicos usando el algoritmo de Dijkstra
+     * Encuentra el camino más corto entre dos vertices específicos usando el algoritmo de main_algorithms.Dijkstra
      * @param graph grafo que contiene los vertices
      * @param start vértice de partida
      * @param end vértice de llegada

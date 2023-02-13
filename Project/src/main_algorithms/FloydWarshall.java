@@ -1,3 +1,5 @@
+package main_algorithms;
+
 public class FloydWarshall {
     // constante para establecer un valor alto en los vértices no conectados
     private static final int INF = Integer.MAX_VALUE;

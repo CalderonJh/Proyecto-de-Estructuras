@@ -1,23 +1,25 @@
+package main_algorithms;
+
 import java.util.*;
 
 
 /**
- * La clase MST contiene los métodos necesarios para
+ * La clase main_algorithms.MST contiene los métodos necesarios para
  * calcular el árbol de expansión minima usando los algoritmos de Kruskal o Prim
  */
 public class MST {
     private static final int INF = Integer.MAX_VALUE;
 
-    // seguimiento del padre de cada nodo en el MST
+    // seguimiento del padre de cada nodo en el main_algorithms.MST
     private static int[] parent;
 
-    // seguimiento del rango de cada nodo en el MST
+    // seguimiento del rango de cada nodo en el main_algorithms.MST
     private static int[] rank;
 
-    //peso de la arista que conecta cada vértice con su padre en el MST
+    //peso de la arista que conecta cada vértice con su padre en el main_algorithms.MST
     private static int[] weights;
 
-    //realiza un seguimiento de los vertices que se han agregado al MST
+    //realiza un seguimiento de los vertices que se han agregado al main_algorithms.MST
     private static boolean[] added;
 
     //número de vertices que tiene el grafo
@@ -51,8 +53,8 @@ public class MST {
     }
 
     /**
-     * Calcula un árbol de expansion minima MST con el algoritmo de Kruskal
-     * @param graph a partir del cual se crea el MST
+     * Calcula un árbol de expansion minima main_algorithms.MST con el algoritmo de Kruskal
+     * @param graph a partir del cual se crea el main_algorithms.MST
      */
     public static void kruskalMST(Graph graph){
         vertices = graph.getVertices();
@@ -88,14 +90,14 @@ public class MST {
             }
         }
 
-        //imprime el MST
+        //imprime el main_algorithms.MST
         int total = 0;
         System.out.println("Edge \tWeight");
         for (Edge edge : mst) {
             System.out.println(edge.toString());
             total += edge.weight;
         }
-        System.out.println("Total weight of the MST: " + total);
+        System.out.println("Total weight of the main_algorithms.MST: " + total);
     }
 
     /**
@@ -142,8 +144,8 @@ public class MST {
 
     // div
     /**
-     * Encuentra el MST
-     * @param graph grafo usado para calcular el MST
+     * Encuentra el main_algorithms.MST
+     * @param graph grafo usado para calcular el main_algorithms.MST
      */
     public static void primMST(Graph graph){
         adj = graph.getAdj();
@@ -152,7 +154,7 @@ public class MST {
         weights = new int[vertices];
         added = new boolean[vertices];
 
-        // asigna el primer vértice como punto de partida del MST
+        // asigna el primer vértice como punto de partida del main_algorithms.MST
         initialize(vertices);
 
         for (int i = 0; i < vertices - 1; i++) {
@@ -161,7 +163,7 @@ public class MST {
             update(minWeightIx);
         }
 
-        //llama al método print para imprimir el MST
+        //llama al método print para imprimir el main_algorithms.MST
         printMST(vertices);
     }
 
@@ -180,7 +182,7 @@ public class MST {
 
     /**
      * @param vertices número de vertices del grafo
-     * @return indice del vértice de menor peso que no se ha agregado al MST
+     * @return indice del vértice de menor peso que no se ha agregado al main_algorithms.MST
      */
     private static int findIndex(int vertices){
         int minW = INF;
@@ -196,7 +198,7 @@ public class MST {
 
     /**
      * Actualiza los pesos y los padres de los vértices adyacentes al vértice
-     * que se acaba de agregar al MST
+     * que se acaba de agregar al main_algorithms.MST
      * @param index índice del vértice que acaba de ser agregado
      */
     private static void update(int index){
@@ -209,7 +211,7 @@ public class MST {
     }
 
     /**
-     * Imprime el MST y el total del peso
+     * Imprime el main_algorithms.MST y el total del peso
      * @param vertices número de vertices del grafo
      */
     private static void printMST(int vertices) {
@@ -220,7 +222,7 @@ public class MST {
             System.out.println(parent[i] + " - " + i + "\t" + adj[i][parent[i]]);
             total += adj[i][parent[i]];
         }
-        System.out.println("Total weight of the MST: " + total + "\n");
+        System.out.println("Total weight of the main_algorithms.MST: " + total + "\n");
 
     }
 }
