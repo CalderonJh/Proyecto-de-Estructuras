@@ -6,35 +6,11 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        /*
         var giron = createGraph(16,"./Project/Rutas/giron.txt");
-        MST.prim(giron);
-        var mst = MST.kruskalMST(giron);
-        System.out.println(mst.getVertices());
-        System.out.println(mst.getEdges());
-        System.out.println(mst.getTotalWeight());
-         */
-        Graph graph = new Graph(9);
-        graph.addEdge(0,1,4);
-        graph.addEdge(0,7,8);
-        graph.addEdge(1,2,8);
-        graph.addEdge(1,7,11);
-        graph.addEdge(2,3,7);
-        graph.addEdge(2,5,4);
-        graph.addEdge(2,8,2);
-        graph.addEdge(3,4,9);
-        graph.addEdge(3,5,14);
-        graph.addEdge(4,5,10);
-        graph.addEdge(5,6,2);
-        graph.addEdge(6,7,1);
-        graph.addEdge(6,8,6);
-        graph.addEdge(7,8,7);
-        System.out.println(Kruskal.kruskalList(graph));
-
+        System.out.println(Kruskal.list(giron));
+        var mst = createGraph(giron.getVertices(), Kruskal.list(giron));
+        System.out.println(Kruskal.list(mst));
     }
-
-
-
 
     /**
      * Usa una lista de Strings para crear un grafo
@@ -44,6 +20,10 @@ public class Main {
      * */
     public static Graph createGraph(int size, String dir){
         var list = read_txt(dir);
+        return createGraph(size, list);
+    }
+
+    public static Graph createGraph(int size, Queue<String> list){
         var graph = new Graph(size);
         int node1, node2, weight;
         String line;
