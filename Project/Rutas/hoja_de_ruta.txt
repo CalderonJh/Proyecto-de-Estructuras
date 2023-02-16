@@ -2,6 +2,9 @@
 2. Al terminar las entregas en un municipio se revisa si vale la pena ir a otro en el tiempo faltante
 
 Para la creación del grafo:
--Crear un txt con formato de entrada (nodo1, nodo2, peso, dirección)
+-Crear un txt con formato de entrada (nodo1, nodo2, peso)
+-tener en cuenta en el peso de las aristas 5 minutos mas correspondientes a la entrega
 -Leer el txt y guardar las líneas en una lista
 -Con la lista crear el grafo
+-Bucaramanga y Florida como un solo municipio
+-Aparte Giron y Piedecuesta
